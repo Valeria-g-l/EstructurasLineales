@@ -27,5 +27,14 @@ public class App {
         System.out.println("Atiende a la persona => " + colaPersonas.remove());
         System.out.println("Tamaño = " + colaPersonas.size());
         colaPersonas.printCola();
+
+        Persona pEliminada = colaPersonas.removeByName("David");
+
+        if (pEliminada == null) {
+            System.out.println("No se encontró la persona.");
+        } else {
+            System.out.println("Persona eliminada: " + pEliminada);
+        }
+
     }
 }

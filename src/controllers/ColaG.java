@@ -1,6 +1,8 @@
 package controllers;
 
 import models.NodeGeneric;
+import models.Persona;
+
 import java.util.EmptyStackException;
 
 public class ColaG<T> {
@@ -60,5 +62,32 @@ public class ColaG<T> {
         }
         System.out.println();
     }
+
+    public T removeByName(String name) {
+    NodeGeneric<T> actual = primero;
+    NodeGeneric<T> anterior = null;
+
+    while (actual != null) {
+        if (actual.getValue() instanceof Persona) {
+            Persona persona = (Persona) actual.getValue();
+            if (persona.getNombre().equalsIgnoreCase(name)) {
+                if (anterior == null) { // Está al principio
+                    primero = actual.getNext();
+                } else {
+                    anterior.setNext(actual.getNext());
+                }
+                if (actual == ultimo) {
+                    ultimo = anterior;
+                }
+                size--;
+                return (T) persona;
+            }
+        }
+        anterior = actual;
+        actual = actual.getNext();
+    }
+    return null; // No se encontró
+}
+
 }
 
