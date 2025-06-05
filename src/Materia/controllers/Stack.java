@@ -1,7 +1,8 @@
-package controllers;
+package Materia.controllers;
 
 import java.util.EmptyStackException;
-import models.Node;
+
+import Materia.models.Node;
 
 public class Stack {
 

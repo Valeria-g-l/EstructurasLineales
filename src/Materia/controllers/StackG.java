@@ -1,8 +1,8 @@
-package controllers;
+package Materia.controllers;
 
 import java.util.EmptyStackException;
 
-import models.NodeGeneric;
+import Materia.models.NodeGeneric;
 
 public class StackG<T> {
 

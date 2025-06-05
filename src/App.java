@@ -1,6 +1,6 @@
-import controllers.Cola;
-import controllers.ColaG;
-import models.Persona;
+import Materia.controllers.Cola;
+import Materia.controllers.ColaG;
+import Materia.models.Persona;
 
 public class App {
     public static void main(String[] args) {

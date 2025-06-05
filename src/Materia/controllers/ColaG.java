@@ -1,9 +1,9 @@
-package controllers;
-
-import models.NodeGeneric;
-import models.Persona;
+package Materia.controllers;
 
 import java.util.EmptyStackException;
+
+import Materia.models.NodeGeneric;
+import Materia.models.Persona;
 
 public class ColaG<T> {
     private NodeGeneric<T> primero;

@@ -1,4 +1,4 @@
-package models;
+package Materia.models;
 
 public class NodeGeneric <T> {
 
