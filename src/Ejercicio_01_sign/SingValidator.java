@@ -7,17 +7,17 @@ public class SingValidator {
     public static boolean esValido(String cad) {
         Stack<Character> pila = new Stack<>();
         for (int i=0; i<cad.length(); i++) {
-            char c=cad.charAt(i);
-            if (c == '(' || c == '{' || c == '[') {
-                pila.push(c);
+            char caracter=cad.charAt(i);
+            if (caracter == '(' || caracter == '{' || caracter == '[') {
+                pila.push(caracter);
             } else {
                 if (pila.isEmpty()) {
                     return false;
                 }
                 char apertura = pila.pop();
-                if ((c == ')' && apertura != '(') ||
-                    (c == '}' && apertura != '{') ||
-                    (c == ']' && apertura != '[')) {
+                if ((caracter == ')' && apertura != '(') ||
+                    (caracter == '}' && apertura != '{') ||
+                    (caracter == ']' && apertura != '[')) {
                     return false;
                 }
             }
@@ -26,11 +26,11 @@ public class SingValidator {
     }
 
     public static void main(String[] args) {
-        String Ejercicio1 = "{[()]}";
-        String Ejercicio2 = "({)}";
+        String Ejemplo1 = "{[()]}";
+        String Ejemplo2 = "({)}";
 
-        System.out.println(esValido(Ejercicio1)); 
-        System.out.println(esValido(Ejercicio2)); 
+        System.out.println(esValido(Ejemplo1)); 
+        System.out.println(esValido(Ejemplo2)); 
     }
 }
     
